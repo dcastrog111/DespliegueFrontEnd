@@ -3,7 +3,6 @@ import { useLoaderData } from "@remix-run/react";
 
 
 export const loader: LoaderFunction = async () => {
-  //const API_URL = process.env.API_URL || "http://localhost:5200";
   
   const data = await fetch(process.env.API_URL + "/api/Users");
   if (!data.ok) {
